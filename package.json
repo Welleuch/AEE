@@ -1,8 +1,9 @@
 {
   "name": "aee",
   "private": true,
-  "version": "0.0.2",
+  "version": "0.0.1",
   "type": "module",
+  "packageManager": "npm@10.9.2",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
