@@ -1,73 +1,44 @@
-# React + TypeScript + Vite
+# AEE - Autonomous Engineering Engine
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+AI-powered system for autonomous design of special machinery modules.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- **Requirements Analysis**: Input payload, speed, distance, object shape
+- **Robot Selection**: Filters real robots (Doosan) by performance requirements
+- **Gripper Selection**: Compatible grippers (SCHUNK, Robotiq, Piab, SMC)
+- **3D Assembly**: Interactive Three.js viewer with adapter visualization
+- **Output**: BOM with pricing + Generated PLC code (Structured Text)
 
-## React Compiler
+## Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Vite + React + TypeScript
+- Three.js / @react-three/fiber
+- Cloudflare Pages (hosting)
+- Cloudflare Workers AI (LLM - optional)
 
-## Expanding the ESLint configuration
+## Demo Flow
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+1. Enter requirements: "Move 2kg at 100/min, distance 300mm, box"
+2. View engineering analysis
+3. Select robot from filtered options
+4. Select compatible gripper
+5. View 3D assembly
+6. Get BOM + Cost + PLC code
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## Development
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm install
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Build
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm run build
 ```
+
+## Deployment
+
+Connected to Cloudflare Pages via GitHub integration.

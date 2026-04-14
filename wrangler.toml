@@ -4,5 +4,9 @@ compatibility_date = "2026-04-14"
 [site]
 bucket = "./dist"
 
-[env.production]
-vars = { ENVIRONMENT = "production" }
+[build]
+command = "npm run build"
+cwd = "."
+
+[builds]
+files = "dist"
