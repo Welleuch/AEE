@@ -1,12 +1,5 @@
-name = "aee-autonomous-engineering"
+name = "aee"
 compatibility_date = "2026-04-14"
 
 [site]
-bucket = "./dist"
-
-[build]
-command = "npm install && npm run build"
-cwd = "."
-
-[builds]
-files = "dist"
+bucket = "dist"
