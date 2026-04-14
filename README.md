@@ -1,4 +1,4 @@
-# AEE - Autonomous Engineering Engine
+# AEE - Autonomous Engineering Engine v1.0
 
 AI-powered system for autonomous design of special machinery modules.
 
