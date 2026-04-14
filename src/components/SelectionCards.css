@@ -1,0 +1,146 @@
+.selection-cards {
+  background: #1a1a2e;
+  border-radius: 12px;
+  padding: 24px;
+  border: 1px solid #16213e;
+}
+
+.selection-cards h3 {
+  color: #e8e8e8;
+  font-size: 1.25rem;
+  margin: 0 0 16px 0;
+}
+
+.selection-cards.empty {
+  text-align: center;
+  padding: 32px;
+}
+
+.no-results {
+  color: #e87929;
+  background: rgba(232, 121, 41, 0.1);
+  padding: 12px 16px;
+  border-radius: 8px;
+  border: 1px solid rgba(232, 121, 41, 0.3);
+}
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 16px;
+}
+
+.card {
+  background: #0f0f1a;
+  border: 2px solid #333;
+  border-radius: 10px;
+  padding: 16px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.card:hover {
+  border-color: #4f46e5;
+  transform: translateY(-2px);
+}
+
+.card.selected {
+  border-color: #4f46e5;
+  background: rgba(79, 70, 229, 0.1);
+  box-shadow: 0 0 20px rgba(79, 70, 229, 0.2);
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #333;
+}
+
+.card .name {
+  color: #fff;
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+
+.card .check {
+  color: #4f46e5;
+  font-size: 1.25rem;
+}
+
+.detail-header {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.detail-header .manufacturer {
+  color: #888;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.detail-header .type {
+  background: #333;
+  color: #ccc;
+  font-size: 0.75rem;
+  padding: 2px 8px;
+  border-radius: 4px;
+}
+
+.type-badge {
+  font-size: 0.75rem;
+  padding: 2px 8px;
+  border-radius: 4px;
+  text-transform: capitalize;
+}
+
+.type-badge.parallel {
+  background: rgba(59, 130, 246, 0.2);
+  color: #60a5fa;
+}
+
+.type-badge.vacuum {
+  background: rgba(16, 185, 129, 0.2);
+  color: #34d399;
+}
+
+.type-badge.magnetic {
+  background: rgba(251, 191, 36, 0.2);
+  color: #fbbf24;
+}
+
+.detail-specs {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.detail-specs .spec {
+  display: flex;
+  flex-direction: column;
+}
+
+.detail-specs .label {
+  color: #666;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.detail-specs .value {
+  color: #e8e8e8;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.card .description {
+  color: #888;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  margin: 0;
+}
